@@ -1,5 +1,5 @@
 export class DimensionModel{
     length:number;
-    breadth:number;
+    breadth:number;gi
     width:number;
 }

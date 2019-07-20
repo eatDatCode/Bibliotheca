@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     BookComponent,
     PageNotFoundComponent,
+    AuthorsComponent,
   ],
   imports: [
     BrowserModule,
