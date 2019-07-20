@@ -1,13 +1,13 @@
-import { Dimension } from '../indexModel';
+import { DimensionModel } from '../indexModel';
 
 
-export class Book{
+export class BookModel{
     name:string;
     ISBN:string;
     Author:number;
     publisher:string;
     pageNo:number;
-    dimension:Dimension;
+    dimension:DimensionModel;
     FirstPublish:Date;
     Genre:number;
     Path:string;

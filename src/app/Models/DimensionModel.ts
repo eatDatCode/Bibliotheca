@@ -1,4 +1,4 @@
-export class Dimension{
+export class DimensionModel{
     length:number;
     breadth:number;
     width:number;

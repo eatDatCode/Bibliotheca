@@ -1,3 +1,3 @@
-export { Dimension } from './Models/Dimension';
-export { Author } from './Models/Author';
-export { Book } from './Models/Book';
+export { AuthorModel } from './Models/AuthorModel';
+export { BookModel } from './Models/BookModel';
+export{ DimensionModel} from './Models/DimensionModel'
