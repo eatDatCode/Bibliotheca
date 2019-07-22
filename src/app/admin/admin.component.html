@@ -1,11 +1,16 @@
 <div class="container-fluid">
   <nav class="nav nav-pills d-flex justify-content-center">
-    <li class="nav-item"><a href="#" class="nav-link active">Add Book</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Add Author</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Add Genre</a></li>
+    <li class="nav-item">
+      <a routerLink="/admin/add-a-book" routerLinkActive="active" class="nav-link">Add Book</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/admin/add-an-author" routerLinkActive="active" class="nav-link">Add Author</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/admin/add-a-genre" routerLinkActive="active" class="nav-link">Add Genre</a>
+    </li>
   </nav>
-</div>
 <hr>
-<app-add-book></app-add-book>
-<app-add-author></app-add-author>
-<app-add-genre></app-add-genre>
+<router-outlet>
+</router-outlet>
+</div>
