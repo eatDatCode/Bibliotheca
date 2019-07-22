@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import{HomeComponent, BookComponent, PageNotFoundComponent, AuthorsComponent} from './index';
+import{HomeComponent, BooksComponent, AuthorsComponent, GenresComponent, AdminComponent , AboutComponent} from './index';
 
 
 
 const routes: Routes = [
-  { path: 'author', component: AuthorsComponent },
-  { path: 'book', component: BookComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'books', component: BooksComponent },
+  { path: 'authors', component: AuthorsComponent },
+  { path: 'genres', component: GenresComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'admin', component: AdminComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
 ];
 // const appRoutes: Routes = [
- 
+
 // ];
 
 @NgModule({
@@ -20,5 +22,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule { 
+export class AppRoutingModule {
 }

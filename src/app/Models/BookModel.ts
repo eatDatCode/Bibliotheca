@@ -1,14 +1,14 @@
-import { DimensionModel } from '../indexModel';
-
+import { GenreModel } from "./GenreModel"
 
 export class BookModel{
-    name:string;
-    ISBN:string;
-    Author:number;
+    isbn:string;
+    title :string;
+    price: number;
+    writtenBy :number;
+    genre: GenreModel;
+    language: string;
     publisher:string;
     pageNo:number;
-    dimension:DimensionModel;
-    FirstPublish:Date;
-    Genre:number;
-    Path:string;
+    firstPublish:Date;
+    bookCover :string;
 }
