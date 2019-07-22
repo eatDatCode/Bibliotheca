@@ -8,7 +8,7 @@ import { BookComponent } from './book/book.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { HomeService } from './Service/home.service';
-import { BookService } from './Service/book.service';
+import { AuthorService, BookService } from './Service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { BookService } from './Service/book.service';
   ],
   providers: [
     BookService,
-    HomeService
+    HomeService,
+    AuthorService
   ],
   bootstrap: [AppComponent]
 })
