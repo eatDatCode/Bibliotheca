@@ -13,6 +13,9 @@ import { ToolsComponent } from './tools/tools.component';
 import { AddBookComponent } from './admin/add-book/add-book.component';
 import { AddAuthorComponent } from './admin/add-author/add-author.component';
 import { AddGenreComponent } from './admin/add-genre/add-genre.component';
+import { AddAuthorService, AddGenreService } from './service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { AddGenreComponent } from './admin/add-genre/add-genre.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AddAuthorService,
+              HttpClient,
+            AddGenreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
