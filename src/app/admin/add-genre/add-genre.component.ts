@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddGenreService } from 'src/app/service';
 import { GenreModel } from 'src/app/Models';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-add-genre',
@@ -15,19 +16,19 @@ export class AddGenreComponent implements OnInit {
   }
 
   genre:GenreModel;
-AddGenre(){
-  this.addGenreService.saveGenre(this.genre) 
-  .subscribe(
-      data => {
-          //this.alertService.success('Registration successful', true);
-          alert("sucessful");
-      },
-      error => {
-          //this.alertService.error(error);
-          //this.loading = false;
-          alert("error");
-      });
-}
+// AddGenre(){
+//   this.addGenreService.saveGenre(this.genre) 
+//   .subscribe(
+//       data => {
+//           //this.alertService.success('Registration successful', true);
+//           alert("sucessful");
+//       },
+//       error => {
+//           //this.alertService.error(error);
+//           //this.loading = false;
+//           alert("error");
+//       });
+// }
   
 
 }

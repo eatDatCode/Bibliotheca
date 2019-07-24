@@ -14,8 +14,9 @@ import { AddBookComponent } from './admin/add-book/add-book.component';
 import { AddAuthorComponent } from './admin/add-author/add-author.component';
 import { AddGenreComponent } from './admin/add-genre/add-genre.component';
 import { AddAuthorService, AddGenreService } from './service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { JwtInterceptor } from './jwt.interceptor';
+// import { JwtInterceptor } from './jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,11 +34,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [AddAuthorService,
-              HttpClient,
-            AddGenreService],
+            AddGenreService,
+            {
+              provide: HTTP_INTERCEPTORS,
+              useClass: JwtInterceptor,
+              multi: true
+            },
+          ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
