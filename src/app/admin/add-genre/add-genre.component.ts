@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-genre',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-genre.component.css']
 })
 export class AddGenreComponent implements OnInit {
+  addGenre: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
+    this.addGenre = new FormGroup({
+      'genre': new FormControl('')
+    })
   }
 
+  onSubmit(){
+    console.log(this.addGenre);
+  }
 }

@@ -1,8 +1,11 @@
 <div class="container">
-  <form>
+  <form [formGroup]="addGenre" (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label for="genre">New Genre</label>
-        <input type="text" class="form-control form-control-sm" placeholder="Dystopian" id="genre">
+      <label>New Genre</label>
+	    <input
+        type="text"
+        formControlName="genre"
+        class="form-control form-control-sm">
     </div>
     <hr>
     <button type="submit" class="btn btn-sm btn-block btn-secondary">Sumbit</button>

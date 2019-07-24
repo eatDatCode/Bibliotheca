@@ -1,28 +1,44 @@
 <div class="container">
-  <form>
+  <form [formGroup]="addAuthor" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="form-group col-md-6">
-        <label for="firstName">First Name</label>
-        <input type="text" class="form-control form-control-sm" placeholder="George" id="firstName">
+        <label>First Name</label>
+        <input
+           type="text"
+           class="form-control form-control-sm"
+           formControlName="firstName"/>
+
       </div>
       <div class="form-group col-md-6">
-        <label for="lastName">Last Name</label>
-        <input type="text" class="form-control form-control-sm" placeholder="Orwell" id="firstName">
+        <label>Last Name</label>
+        <input
+           type="text"
+           formControlName="lastName"
+           class="form-control form-control-sm"/>
       </div>
     </div>
 
     <div class="row">
       <div class="form-group col-md-6">
-        <label for="dob">Date of Birth</label>
-        <input type="text" class="form-control form-control-sm" placeholder="26th June, 1903" id="dob">
+        <label>Date of Birth</label>
+        <input
+          type="text"
+          formControlName="dob"
+          class="form-control form-control-sm"/>
       </div>
       <div class="form-group col-md-6">
-        <label for="place">Place</label>
-        <input type="text" class="form-control form-control-sm" placeholder="England, UK" id="place">
+        <label>Place</label>
+        <input
+          type="text"
+          formControlName="place"
+          class="form-control form-control-sm"/>
       </div>
     </div>
     <div class="custom-file">
-      <input type="file" class="custom-file-input form-control-sm" id="authorAvatar" required>
+      <input
+        type="file"
+        formControlName="avatar"
+        class="custom-file-input form-control-sm"/>
       <label class="custom-file-label" for="authorAvatar">Choose file...</label>
     </div>
     <hr>
