@@ -37,12 +37,9 @@ import { JwtInterceptor } from './jwt.interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     HttpClientModule,
-=======
     ReactiveFormsModule,
     FormsModule
->>>>>>> aba45e1c1a8e64313b0c220b965c151e4c9c31c4
   ],
   providers: [AddAuthorService,
             AddGenreService,
