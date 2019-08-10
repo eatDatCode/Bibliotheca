@@ -15,10 +15,10 @@ import { ToolsComponent } from './tools/tools.component';
 import { AddBookComponent } from './admin/add-book/add-book.component';
 import { AddAuthorComponent } from './admin/add-author/add-author.component';
 import { AddGenreComponent } from './admin/add-genre/add-genre.component';
-import { AddAuthorService, AddGenreService } from './service';
+import { AddAuthorService, AddGenreService, AddBookService } from './service';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { JwtInterceptor } from './jwt.interceptor';
-// import { JwtInterceptor } from './jwt.interceptor';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -39,10 +39,12 @@ import { JwtInterceptor } from './jwt.interceptor';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularMultiSelectModule
   ],
   providers: [AddAuthorService,
             AddGenreService,
+            AddBookService,
             {
               provide: HTTP_INTERCEPTORS,
               useClass: JwtInterceptor,

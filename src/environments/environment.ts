@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   isStage:true,
-  appHost:"https://localhost:44332/"
+  appHost:"http://localhost:50444/"
 };
 
 /*

@@ -9,10 +9,8 @@
     </div>
     <div class="form-group">
       <label>Written By</label>
-      <input
-        type="text"
-        formControlName="writtenBy"
-        class="form-control form-control-sm">
+        <angular2-multiselect class="form-control form-control-sm" [data]="bookAuthors" [(ngModel)]="bookAuthorId"  formControlName="writtenBy"
+        [settings]="dropdownSettings"></angular2-multiselect>
     </div>
     <div class="form-row">
       <div class="form-group col-md-3">
@@ -31,24 +29,18 @@
       </div>
       <div class="form-group col-md-4">
         <label>Genre</label>
-        <select
-          formControlName="genre"
-          class="form-control form-control-sm">
-          <option value="dystopian">Dystopian</option>
-          <option value="fiction">Fiction</option>
-          <option value="non_fiction">Non-Fiction</option>
-          <option value="mystery">Mystery</option>
-          <option value="others">other</option>
-        </select>
+        <angular2-multiselect class="form-control form-control-sm" [data]="bookGenres" [(ngModel)]="bookGenreId" formControlName="genre"
+        [settings]="dropdownSettings" ></angular2-multiselect>
       </div>
       <div class="form-group col-md-3">
         <label>Language</label>
         <select
            formControlName="language"
            class="form-control form-control-sm">
-          <option value="english">English</option>
-          <option value="hindi">Hindi</option>
-          <option value="bengali">Bengali</option>
+          <option value="English">English</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Bengali">Bengali</option>
+          <option value="Odia">Odia</option>
           <option value="other">other</option>
         </select>
        </div>

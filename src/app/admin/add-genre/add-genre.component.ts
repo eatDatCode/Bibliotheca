@@ -27,7 +27,7 @@ onSubmit(){
   .subscribe(
       data => {
           //this.alertService.success('Registration successful', true);
-          alert("sucessful");
+          alert(data);
       },
       error => {
           //this.alertService.error(error);

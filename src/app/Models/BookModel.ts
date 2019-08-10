@@ -1,14 +1,14 @@
-import { GenreModel } from "./GenreModel"
-
 export class BookModel{
+    bookId:number;
     isbn:string;
-    title :string;
+    title:string;
     price: number;
-    writtenBy :number;
-    genre: GenreModel;
+    writtenBy :any;
+    genre: any;
     language: string;
-    publisher:string;
+    publisher:any;
     pageNo:number;
     firstPublish:Date;
     bookCover :string;
+    author:any;
 }
