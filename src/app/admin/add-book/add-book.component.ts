@@ -47,7 +47,7 @@ export class AddBookComponent implements OnInit {
         data => {
           //  this.alertService.success('Registration successful', true);
           // this.router.navigate(['/login']);
-          console.log(data);
+        //  console.log(data);
           alert(data);
           //this.loading=false;
         },

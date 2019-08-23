@@ -26,4 +26,9 @@ export class AddBookService {
   getGenre(){
     return this.http.get<GenreModel[]>(ApiEndPoints.getGenre);
   }
+
+  getBook(){
+    debugger;
+    return this.http.get(ApiEndPoints.getBook);
+  }
 }
